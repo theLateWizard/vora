@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "SCUI.h"
+
 
 @interface AppDelegate ()
 

@@ -16,6 +16,13 @@
 
 @implementation AppDelegate
 
++ (void) initialize {
+    
+    [SCSoundCloud setClientID:@"3c04fa1764946575fd730d600ca3198a"
+                       secret:@"c824bb10daf8b82dda18864e7ba3ed92"
+                  redirectURL:[NSURL URLWithString:@"sampleproject://oauth"]];
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

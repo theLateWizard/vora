@@ -1,9 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KPT-Af-Bo7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1cL-5H-SS1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--Login Page View Controller-->
+        <scene sceneID="g0q-zX-LjQ">
+            <objects>
+                <viewController id="N2G-EN-hKZ" customClass="LoginPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HgY-cv-kos"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q8C-9k-A5G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cAy-Ih-PeV">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="on8-AO-ywO">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="180" y="367" width="40" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="9TZ-JC-Kfk" kind="show" identifier="Clicked Login" id="6tn-Ak-FyZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsJ-Th-q6r">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="248" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="login:" destination="N2G-EN-hKZ" eventType="touchUpInside" id="NMk-bX-kcZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="on8-AO-ywO"/>
+                                <exclude reference="SsJ-Th-q6r"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="on8-AO-ywO"/>
+                                <include reference="SsJ-Th-q6r"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nu1-It-0gC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ps8-Wt-I6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2797.5" y="-527"/>
+        </scene>
         <!--Song List Table View Controller-->
         <scene sceneID="UzV-LB-NqC">
             <objects>
@@ -28,25 +84,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RCq-YT-6KT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2638.5" y="-539"/>
+            <point key="canvasLocation" x="3556.5" y="-539"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Xcw-X3-kBt">
+        <scene sceneID="t37-Ic-KOq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KPT-Af-Bo7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1cL-5H-SS1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fOX-z3-FZs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DvR-WZ-8rL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="9TZ-JC-Kfk" kind="relationship" relationship="rootViewController" id="dYl-dJ-0Sd"/>
+                        <segue destination="N2G-EN-hKZ" kind="relationship" relationship="rootViewController" id="2i0-uO-6eW"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6sj-vR-JTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76f-mt-59C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720.5" y="-539"/>
+            <point key="canvasLocation" x="1879.5" y="-527"/>
         </scene>
     </scenes>
 </document>

@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+
 
 @interface SongListTableViewController : UITableViewController
+
+
+@property (nonatomic) NSMutableArray *songs;
+
+
+
+
+
 
 @end

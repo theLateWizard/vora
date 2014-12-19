@@ -15,6 +15,7 @@
 		034E4C371A4125CE0012218E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034E4C351A4125CE0012218E /* LaunchScreen.xib */; };
 		034E4C431A4125CE0012218E /* VoraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 034E4C421A4125CE0012218E /* VoraTests.m */; };
 		03AD2D561A44B11D00CA1857 /* SongListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AD2D551A44B11D00CA1857 /* SongListTableViewController.m */; };
+		03AD2D5C1A44BD7100CA1857 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AD2D5B1A44BD7100CA1857 /* LoginPageViewController.m */; };
 		C7B5A6C2980F1051D359B686 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00F7011C3B606FB71A0A75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		034E4C421A4125CE0012218E /* VoraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoraTests.m; sourceTree = "<group>"; };
 		03AD2D541A44B11D00CA1857 /* SongListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongListTableViewController.h; sourceTree = "<group>"; };
 		03AD2D551A44B11D00CA1857 /* SongListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongListTableViewController.m; sourceTree = "<group>"; };
+		03AD2D5A1A44BD7100CA1857 /* LoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPageViewController.h; sourceTree = "<group>"; };
+		03AD2D5B1A44BD7100CA1857 /* LoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPageViewController.m; sourceTree = "<group>"; };
 		106770B704B6F49B51C75EE0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7051AFDDE52DA0912092B994 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7F00F7011C3B606FB71A0A75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +94,8 @@
 		034E4C251A4125CE0012218E /* Vora */ = {
 			isa = PBXGroup;
 			children = (
+				03AD2D5A1A44BD7100CA1857 /* LoginPageViewController.h */,
+				03AD2D5B1A44BD7100CA1857 /* LoginPageViewController.m */,
 				03AD2D541A44B11D00CA1857 /* SongListTableViewController.h */,
 				03AD2D551A44B11D00CA1857 /* SongListTableViewController.m */,
 				034E4C301A4125CE0012218E /* Main.storyboard */,
@@ -285,6 +290,7 @@
 			files = (
 				034E4C2F1A4125CE0012218E /* ViewController.m in Sources */,
 				034E4C2C1A4125CE0012218E /* AppDelegate.m in Sources */,
+				03AD2D5C1A44BD7100CA1857 /* LoginPageViewController.m in Sources */,
 				03AD2D561A44B11D00CA1857 /* SongListTableViewController.m in Sources */,
 				034E4C291A4125CE0012218E /* main.m in Sources */,
 			);

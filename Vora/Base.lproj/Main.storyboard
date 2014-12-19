@@ -13,30 +13,40 @@
                         <viewControllerLayoutGuide type="bottom" id="Q8C-9k-A5G"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cAy-Ih-PeV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="on8-AO-ywO">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Segue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="178" y="481" width="44" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsJ-Th-q6r">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="180" y="367" width="40" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="9TZ-JC-Kfk" kind="show" identifier="Clicked Login" id="6tn-Ak-FyZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsJ-Th-q6r">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="248" width="46" height="30"/>
+                                    <rect key="frame" x="177" y="248" width="38" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="login:" destination="N2G-EN-hKZ" eventType="touchUpInside" id="NMk-bX-kcZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qw-zb-wrF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Show Tracks">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="156" y="379" width="88" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="getSongs:" destination="N2G-EN-hKZ" eventType="touchUpInside" id="FSJ-BE-vZN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,12 +55,14 @@
                             <mask key="subviews">
                                 <exclude reference="on8-AO-ywO"/>
                                 <exclude reference="SsJ-Th-q6r"/>
+                                <exclude reference="3Qw-zb-wrF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="on8-AO-ywO"/>
                                 <include reference="SsJ-Th-q6r"/>
+                                <include reference="3Qw-zb-wrF"/>
                             </mask>
                         </variation>
                     </view>
@@ -59,32 +71,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ps8-Wt-I6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2797.5" y="-527"/>
-        </scene>
-        <!--Song List Table View Controller-->
-        <scene sceneID="UzV-LB-NqC">
-            <objects>
-                <tableViewController id="9TZ-JC-Kfk" customClass="SongListTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dvr-vh-7ao">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gax-IZ-d2Y">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gax-IZ-d2Y" id="rX3-YB-ZrA">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="9TZ-JC-Kfk" id="pIC-SZ-0oG"/>
-                            <outlet property="delegate" destination="9TZ-JC-Kfk" id="hc3-Ao-J18"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="eAk-Ss-zF4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RCq-YT-6KT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3556.5" y="-539"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t37-Ic-KOq">

@@ -14,6 +14,7 @@
 		034E4C341A4125CE0012218E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034E4C331A4125CE0012218E /* Images.xcassets */; };
 		034E4C371A4125CE0012218E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034E4C351A4125CE0012218E /* LaunchScreen.xib */; };
 		034E4C431A4125CE0012218E /* VoraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 034E4C421A4125CE0012218E /* VoraTests.m */; };
+		03AD2D531A44AF9B00CA1857 /* SongListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AD2D521A44AF9B00CA1857 /* SongListViewController.m */; };
 		C7B5A6C2980F1051D359B686 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00F7011C3B606FB71A0A75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		034E4C3C1A4125CE0012218E /* VoraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		034E4C411A4125CE0012218E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		034E4C421A4125CE0012218E /* VoraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoraTests.m; sourceTree = "<group>"; };
+		03AD2D511A44AF9B00CA1857 /* SongListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongListViewController.h; sourceTree = "<group>"; };
+		03AD2D521A44AF9B00CA1857 /* SongListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongListViewController.m; sourceTree = "<group>"; };
 		106770B704B6F49B51C75EE0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7051AFDDE52DA0912092B994 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7F00F7011C3B606FB71A0A75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,8 +91,8 @@
 		034E4C251A4125CE0012218E /* Vora */ = {
 			isa = PBXGroup;
 			children = (
-				034E4C2D1A4125CE0012218E /* ViewController.h */,
-				034E4C2E1A4125CE0012218E /* ViewController.m */,
+				03AD2D511A44AF9B00CA1857 /* SongListViewController.h */,
+				03AD2D521A44AF9B00CA1857 /* SongListViewController.m */,
 				034E4C301A4125CE0012218E /* Main.storyboard */,
 				034E4C261A4125CE0012218E /* Supporting Files */,
 			);
@@ -99,6 +102,8 @@
 		034E4C261A4125CE0012218E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				034E4C2D1A4125CE0012218E /* ViewController.h */,
+				034E4C2E1A4125CE0012218E /* ViewController.m */,
 				034E4C2A1A4125CE0012218E /* AppDelegate.h */,
 				034E4C2B1A4125CE0012218E /* AppDelegate.m */,
 				034E4C331A4125CE0012218E /* Images.xcassets */,
@@ -279,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				034E4C2F1A4125CE0012218E /* ViewController.m in Sources */,
+				03AD2D531A44AF9B00CA1857 /* SongListViewController.m in Sources */,
 				034E4C2C1A4125CE0012218E /* AppDelegate.m in Sources */,
 				034E4C291A4125CE0012218E /* main.m in Sources */,
 			);

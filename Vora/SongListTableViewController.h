@@ -1,13 +1,13 @@
 //
-//  SongListViewController.h
+//  SongListTableViewController.h
 //  Vora
 //
 //  Created by Erik Griffin on 12/19/14.
 //  Copyright (c) 2014 Erik Griffin. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface SongListViewController : ViewController
+@interface SongListTableViewController : UITableViewController
 
 @end

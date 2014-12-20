@@ -18,10 +18,15 @@
 -(NSMutableArray *) songs {
     
     if (!_songs) {
-        NSLog(@"Hello there!");
+        NSLog(@"Hello there! Greetings from an uninstantiated song array!");
         _songs = [[NSMutableArray alloc]init];
     }
     return _songs;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    // NSLog(@"I SHALL APPEAR!");
 }
 
 - (void)viewDidLoad {
@@ -55,7 +60,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"Checkpoint A!");
     
     static NSString *CellIdentifier = @"Cell";
     

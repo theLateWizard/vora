@@ -20,8 +20,6 @@
 
 - (IBAction)getSongs:(UIButton *)sender {
     
-    NSLog(@"Checkpoint B!");
-    
     SCAccount *account = [SCSoundCloud account];
     
     if (!account) {
@@ -43,20 +41,20 @@
         
         if (!jsonError && [jsonResponse isKindOfClass:[NSArray class]]) {
             
-            NSLog(@"Checkpoint C!");
+            // !! ** !! this code makes SongListTableViewController nib not found.
+           // SongListTableViewController *songListVC = [[SongListTableViewController alloc]initWithNibName:@"SongListTableViewController" bundle:nil];
             
-            SongListTableViewController *songListVC = [[SongListTableViewController alloc]initWithNibName:@"SongListTableViewController"
-                                                                                                 bundle:nil];
+            
+            SongListTableViewController *songListVC = [[SongListTableViewController alloc]init];
             
             songListVC.songs = (NSMutableArray *)jsonResponse;
             
-            NSLog(@"Checkpoint D!");
+      
             
-            //!! ** !! This is where you left off.  Could not load SongListTableViewController
+            
             
             [self presentViewController:songListVC animated:YES completion:nil];
             
-            NSLog(@"Checkpoint E!");
             
         }
         
@@ -110,6 +108,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)viewWillDisappear:(BOOL)animated {
+    
+    // NSLog(@"View will disappear!");
+    
+}
+
+
 
 /*
 #pragma mark - Navigation

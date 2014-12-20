@@ -15,6 +15,9 @@
 
 @property (nonatomic) NSMutableArray *songs;
 
+@property (nonatomic) AVAudioPlayer *player;
+
+
 
 
 

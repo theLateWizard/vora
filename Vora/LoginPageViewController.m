@@ -41,18 +41,12 @@
         
         if (!jsonError && [jsonResponse isKindOfClass:[NSArray class]]) {
             
-            // !! ** !! this code makes SongListTableViewController nib not found.
-           // SongListTableViewController *songListVC = [[SongListTableViewController alloc]initWithNibName:@"SongListTableViewController" bundle:nil];
-            
             
             SongListTableViewController *songListVC = [[SongListTableViewController alloc]init];
             
             songListVC.songs = (NSMutableArray *)jsonResponse;
             
-      
-            
-            
-            
+       
             [self presentViewController:songListVC animated:YES completion:nil];
             
             
@@ -60,7 +54,7 @@
         
     };
     
-    NSString *resourceURL = @"https://api.soundcloud.com/me/tracks.json";
+    NSString *resourceURL = @"https://api.soundcloud.com/me/favorites.json";
     [SCRequest performMethod:SCRequestMethodGET
                   onResource:[NSURL URLWithString:resourceURL]
              usingParameters:nil

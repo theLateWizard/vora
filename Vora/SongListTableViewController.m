@@ -7,6 +7,7 @@
 //
 
 #import "SongListTableViewController.h"
+#import "SCUI.h"
 
 @interface SongListTableViewController ()
 
@@ -23,6 +24,17 @@
     }
     return _songs;
 }
+
+
+/*
+-(AVAudioPlayer *) player {
+    if (!_player) {
+        NSLog(@"Hello from unallocated _player!");
+        _player = [[AVAudioPlayer alloc]init];
+    }
+    return _player;
+}
+ */
 
 -(void)viewWillAppear:(BOOL)animated {
     
@@ -55,6 +67,32 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     return [self.songs count];
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    SCAccount *account = [SCSoundCloud account];
+    
+    NSDictionary *song = [self.songs objectAtIndex:indexPath.row];
+    NSString *streamURL = [song objectForKey:@"stream_url"];
+    
+    [SCRequest performMethod:SCRequestMethodGET
+                  onResource:[NSURL URLWithString:streamURL]
+             usingParameters:nil
+                 withAccount:account
+      sendingProgressHandler:nil
+             responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                 
+                 NSError *playerError;
+                 
+                 self.player = [[AVAudioPlayer alloc]initWithData:data error:&playerError];
+                 
+                 [self.player prepareToPlay];
+                 [self.player play];
+                 
+             }];
+
 }
 
 
